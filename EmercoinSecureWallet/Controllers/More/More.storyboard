@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--More View Controller-->
+        <scene sceneID="d7t-fP-sO6">
+            <objects>
+                <viewController storyboardIdentifier="MoreViewController" id="kfz-RB-znY" customClass="MoreViewController" customModule="EmercoinSecureWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hkI-1f-ae6"/>
+                        <viewControllerLayoutGuide type="bottom" id="yRC-2i-Hvm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pPX-J7-Fio">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jaz-gf-KSJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXe-YK-rDb">
+                                        <rect key="frame" x="30" y="41" width="315" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMERCOIN SECURE WALLET" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="OKS-9P-fBA">
+                                        <rect key="frame" x="30" y="16" width="315" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="gRI-ss-cOn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.5490196078431373" green="0.36470588235294116" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="DyZ-KU-Npf"/>
+                                    <constraint firstItem="kXe-YK-rDb" firstAttribute="leading" secondItem="Jaz-gf-KSJ" secondAttribute="leading" constant="30" id="EM5-5m-95U"/>
+                                    <constraint firstAttribute="trailing" secondItem="OKS-9P-fBA" secondAttribute="trailing" constant="30" id="Kgy-nG-ag4"/>
+                                    <constraint firstItem="OKS-9P-fBA" firstAttribute="leading" secondItem="Jaz-gf-KSJ" secondAttribute="leading" constant="30" id="SX7-VL-ydR"/>
+                                    <constraint firstAttribute="trailing" secondItem="kXe-YK-rDb" secondAttribute="trailing" constant="30" id="TW5-oi-ERA"/>
+                                    <constraint firstItem="kXe-YK-rDb" firstAttribute="top" secondItem="OKS-9P-fBA" secondAttribute="bottom" constant="-5" id="UdV-G3-Egf"/>
+                                    <constraint firstItem="OKS-9P-fBA" firstAttribute="top" secondItem="Jaz-gf-KSJ" secondAttribute="top" constant="16" id="zUP-xA-oMK"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qky-E6-ngR">
+                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MoreCell" id="K1r-1m-7mz" customClass="MoreCell" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K1r-1m-7mz" id="gIu-KT-qIP">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_home_icon" translatesAutoresizingMaskIntoConstraints="NO" id="IsT-oD-eow">
+                                                    <rect key="frame" x="30" y="13" width="16" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="16" id="VjO-EK-wEA"/>
+                                                        <constraint firstAttribute="height" constant="17" id="njr-Qh-bFx"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWa-rn-buw">
+                                                    <rect key="frame" x="74" y="12" width="260" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="uM2-yi-JW5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KWa-rn-buw" firstAttribute="leading" secondItem="IsT-oD-eow" secondAttribute="trailing" constant="28" id="9WJ-gr-THg"/>
+                                                <constraint firstItem="IsT-oD-eow" firstAttribute="top" secondItem="gIu-KT-qIP" secondAttribute="top" constant="13" id="EIH-qt-JWc"/>
+                                                <constraint firstItem="KWa-rn-buw" firstAttribute="top" secondItem="gIu-KT-qIP" secondAttribute="top" constant="12" id="WjA-wy-unX"/>
+                                                <constraint firstItem="IsT-oD-eow" firstAttribute="leading" secondItem="gIu-KT-qIP" secondAttribute="leading" constant="30" id="pn0-fH-Ck3"/>
+                                                <constraint firstAttribute="trailing" secondItem="KWa-rn-buw" secondAttribute="trailing" constant="8" id="uWv-hr-pMs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="iconView" destination="IsT-oD-eow" id="eGl-v2-SOP"/>
+                                            <outlet property="titleLabel" destination="KWa-rn-buw" id="DWd-aP-IzL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="kfz-RB-znY" id="5Pp-bc-uPl"/>
+                                    <outlet property="delegate" destination="kfz-RB-znY" id="f6g-U5-nV8"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yRC-2i-Hvm" firstAttribute="top" secondItem="Qky-E6-ngR" secondAttribute="bottom" id="38z-IV-z19"/>
+                            <constraint firstAttribute="trailing" secondItem="Jaz-gf-KSJ" secondAttribute="trailing" id="9bb-oo-9cz"/>
+                            <constraint firstItem="Qky-E6-ngR" firstAttribute="leading" secondItem="pPX-J7-Fio" secondAttribute="leading" id="MDM-gj-IZq"/>
+                            <constraint firstItem="Jaz-gf-KSJ" firstAttribute="leading" secondItem="pPX-J7-Fio" secondAttribute="leading" id="VTk-5U-Wt5"/>
+                            <constraint firstItem="Qky-E6-ngR" firstAttribute="top" secondItem="Jaz-gf-KSJ" secondAttribute="bottom" id="cfk-Cl-7PM"/>
+                            <constraint firstItem="Jaz-gf-KSJ" firstAttribute="top" secondItem="pPX-J7-Fio" secondAttribute="top" constant="20" id="p5J-SH-hnd"/>
+                            <constraint firstAttribute="trailing" secondItem="Qky-E6-ngR" secondAttribute="trailing" id="pZh-lK-sZ0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Qky-E6-ngR" id="qi1-5u-Pds"/>
+                        <outlet property="titleLabel" destination="OKS-9P-fBA" id="oCw-2x-eDq"/>
+                        <outlet property="versionLabel" destination="kXe-YK-rDb" id="dVQ-2W-JKc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UPW-Vc-etG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-468" y="-277.51124437781112"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu_home_icon" width="16" height="17"/>
+    </resources>
+</document>

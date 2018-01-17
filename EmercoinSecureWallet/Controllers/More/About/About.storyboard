@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--About View Controller-->
+        <scene sceneID="Tgb-tu-Hm4">
+            <objects>
+                <viewController storyboardIdentifier="AboutViewController" id="Y2u-0D-XBt" customClass="AboutViewController" customModule="EmercoinSecureWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hCJ-08-q6o"/>
+                        <viewControllerLayoutGuide type="bottom" id="fSt-Mh-UTc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iaO-yr-1Nw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOb-ah-ME4">
+                                <rect key="frame" x="0.0" y="20" width="58" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="UVz-YB-xfh"/>
+                                    <constraint firstAttribute="width" constant="58" id="bFW-7q-z4A"/>
+                                </constraints>
+                                <state key="normal" image="reg_arrow_icon"/>
+                                <connections>
+                                    <action selector="back" destination="Y2u-0D-XBt" eventType="touchUpInside" id="Uod-Cy-gng"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iS4-XW-IQF">
+                                <rect key="frame" x="0.0" y="81" width="375" height="586"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="daE-Cu-hOv">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reg_logo" translatesAutoresizingMaskIntoConstraints="NO" id="IAA-OB-SfN">
+                                                <rect key="frame" x="158" y="0.0" width="58" height="49"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="49" id="8hH-tU-X9I"/>
+                                                    <constraint firstAttribute="width" constant="58" id="YN1-bu-T1o"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MOBILE WALLET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="KZA-jp-DsP">
+                                                <rect key="frame" x="99" y="95" width="176.5" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="29" id="uEY-EU-8ax"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                                <color key="textColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMERCOIN SECURE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="TyL-s1-l4j">
+                                                <rect key="frame" x="44" y="57" width="286" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="LOI-y3-uz3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <color key="textColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="TyL-s1-l4j" firstAttribute="top" secondItem="IAA-OB-SfN" secondAttribute="bottom" constant="8" id="1tv-b1-74A"/>
+                                            <constraint firstItem="IAA-OB-SfN" firstAttribute="top" secondItem="daE-Cu-hOv" secondAttribute="top" id="Goj-F0-Z1T"/>
+                                            <constraint firstItem="TyL-s1-l4j" firstAttribute="centerX" secondItem="daE-Cu-hOv" secondAttribute="centerX" id="b8K-Oi-WgG"/>
+                                            <constraint firstItem="KZA-jp-DsP" firstAttribute="centerX" secondItem="daE-Cu-hOv" secondAttribute="centerX" id="hFr-xI-HVh"/>
+                                            <constraint firstItem="IAA-OB-SfN" firstAttribute="centerX" secondItem="daE-Cu-hOv" secondAttribute="centerX" id="r3J-0a-iBH"/>
+                                            <constraint firstAttribute="height" constant="140" id="sBk-UM-gqn"/>
+                                            <constraint firstItem="KZA-jp-DsP" firstAttribute="top" secondItem="TyL-s1-l4j" secondAttribute="bottom" id="wtW-pz-4VC"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ES-lX-WK9">
+                                        <rect key="frame" x="0.0" y="140" width="375" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFM-al-QZe" customClass="SLLinkLabel" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="0.0" width="335" height="20"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="123">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="6L1-FV-tFQ"/>
+                                            <constraint firstItem="QFM-al-QZe" firstAttribute="top" secondItem="9ES-lX-WK9" secondAttribute="top" id="OQg-Bh-2PB"/>
+                                            <constraint firstItem="QFM-al-QZe" firstAttribute="leading" secondItem="9ES-lX-WK9" secondAttribute="leading" constant="20" id="bXa-9q-EPt"/>
+                                            <constraint firstAttribute="bottom" secondItem="QFM-al-QZe" secondAttribute="bottom" id="eCv-nG-Dfi"/>
+                                            <constraint firstAttribute="trailing" secondItem="QFM-al-QZe" secondAttribute="trailing" constant="20" id="zld-PZ-mJD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="daE-Cu-hOv" firstAttribute="leading" secondItem="9ES-lX-WK9" secondAttribute="leading" id="4g7-Tl-FBI"/>
+                                    <constraint firstItem="9ES-lX-WK9" firstAttribute="top" secondItem="daE-Cu-hOv" secondAttribute="bottom" id="4ob-B2-Qp9"/>
+                                    <constraint firstAttribute="trailing" secondItem="daE-Cu-hOv" secondAttribute="trailing" id="CMH-1b-8Hw"/>
+                                    <constraint firstItem="daE-Cu-hOv" firstAttribute="centerX" secondItem="iS4-XW-IQF" secondAttribute="centerX" id="DKe-91-oPC"/>
+                                    <constraint firstAttribute="bottom" secondItem="9ES-lX-WK9" secondAttribute="bottom" id="TaU-tR-jSx"/>
+                                    <constraint firstItem="daE-Cu-hOv" firstAttribute="top" secondItem="iS4-XW-IQF" secondAttribute="top" id="V3e-tM-RjM"/>
+                                    <constraint firstAttribute="trailing" secondItem="9ES-lX-WK9" secondAttribute="trailing" id="VKT-HM-fkF"/>
+                                    <constraint firstItem="9ES-lX-WK9" firstAttribute="leading" secondItem="iS4-XW-IQF" secondAttribute="leading" id="iJR-V2-ZAW"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iS4-XW-IQF" secondAttribute="trailing" id="Bbi-pg-Sff"/>
+                            <constraint firstItem="iS4-XW-IQF" firstAttribute="bottom" secondItem="fSt-Mh-UTc" secondAttribute="top" id="H1N-7O-AtD"/>
+                            <constraint firstItem="iS4-XW-IQF" firstAttribute="leading" secondItem="rOb-ah-ME4" secondAttribute="leading" id="Jxc-vW-yov"/>
+                            <constraint firstItem="iS4-XW-IQF" firstAttribute="top" secondItem="rOb-ah-ME4" secondAttribute="bottom" id="OCd-3P-3bX"/>
+                            <constraint firstItem="rOb-ah-ME4" firstAttribute="leading" secondItem="iaO-yr-1Nw" secondAttribute="leading" id="ib6-1Y-8gp"/>
+                            <constraint firstItem="rOb-ah-ME4" firstAttribute="top" secondItem="hCJ-08-q6o" secondAttribute="bottom" id="v9w-bA-L0z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="QFM-al-QZe" id="rNG-R6-bok"/>
+                        <outlet property="titleLabel" destination="KZA-jp-DsP" id="W0t-6m-LhL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nsw-LF-Hh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.60000000000002" y="-19.340329835082461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="reg_arrow_icon" width="19" height="16"/>
+        <image name="reg_logo" width="110" height="96"/>
+    </resources>
+</document>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="VFM-W4-erT" customClass="ChangeAddressView2" customModule="EmercoinSecureWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMj-1r-sb0" userLabel="main view" customClass="PopupBackgroundView" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                    <rect key="frame" x="20" y="216" width="374" height="305"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Tcs-b9-W7j">
+                            <rect key="frame" x="8" y="21" width="358" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="eYq-CK-c0k"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ob6-JN-OJf">
+                            <rect key="frame" x="83" y="250" width="209" height="31"/>
+                            <subviews>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIX-ou-dhQ" customClass="YesButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="104" height="31"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <state key="normal" title="Save">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="enableConfig" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="disableColor" value="ABABAB"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="enableColor" value="8C5DA3"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="doneButtonPressedWithSender:" destination="VFM-W4-erT" eventType="touchUpInside" id="KMv-Kd-KRd"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ky-a9-I49" customClass="CancelButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                    <rect key="frame" x="105" y="0.0" width="104" height="31"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="cancelButtonPressedWithSender:" destination="VFM-W4-erT" eventType="touchUpInside" id="8n0-YH-k3H"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="209" id="75X-0L-FM6"/>
+                                <constraint firstAttribute="height" constant="31" id="gfD-yJ-TmX"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K3L-87-gad">
+                            <rect key="frame" x="8" y="66" width="358" height="163"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="VFM-W4-erT" id="sYY-sj-cbi"/>
+                                <outlet property="delegate" destination="VFM-W4-erT" id="y0f-gK-Wr6"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="305" id="F91-Lr-WAo"/>
+                        <constraint firstItem="K3L-87-gad" firstAttribute="leading" secondItem="EMj-1r-sb0" secondAttribute="leading" constant="8" id="RuY-39-UE1"/>
+                        <constraint firstItem="ob6-JN-OJf" firstAttribute="top" secondItem="K3L-87-gad" secondAttribute="bottom" constant="21" id="Vul-Wf-lL2"/>
+                        <constraint firstItem="ob6-JN-OJf" firstAttribute="centerX" secondItem="EMj-1r-sb0" secondAttribute="centerX" id="WVE-4g-ves"/>
+                        <constraint firstItem="Tcs-b9-W7j" firstAttribute="leading" secondItem="EMj-1r-sb0" secondAttribute="leading" constant="8" id="Ytg-Uw-Xch"/>
+                        <constraint firstItem="Tcs-b9-W7j" firstAttribute="centerX" secondItem="EMj-1r-sb0" secondAttribute="centerX" id="mZd-Kt-uZr"/>
+                        <constraint firstAttribute="trailing" secondItem="K3L-87-gad" secondAttribute="trailing" constant="8" id="psq-hz-M15"/>
+                        <constraint firstAttribute="bottom" secondItem="ob6-JN-OJf" secondAttribute="bottom" constant="24" id="qoF-Y0-J9d"/>
+                        <constraint firstItem="K3L-87-gad" firstAttribute="top" secondItem="Tcs-b9-W7j" secondAttribute="bottom" constant="21" id="tzK-CW-CsJ"/>
+                        <constraint firstItem="Tcs-b9-W7j" firstAttribute="top" secondItem="EMj-1r-sb0" secondAttribute="top" constant="21" id="x4s-jw-io8"/>
+                        <constraint firstAttribute="trailing" secondItem="Tcs-b9-W7j" secondAttribute="trailing" constant="8" id="zRi-Gs-fwU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="EMj-1r-sb0" firstAttribute="leading" secondItem="VFM-W4-erT" secondAttribute="leading" constant="20" id="C3Y-0G-gdc"/>
+                <constraint firstItem="EMj-1r-sb0" firstAttribute="centerY" secondItem="VFM-W4-erT" secondAttribute="centerY" id="HlJ-dI-Pzj"/>
+                <constraint firstAttribute="trailing" secondItem="EMj-1r-sb0" secondAttribute="trailing" constant="20" id="hRH-M4-eRm"/>
+                <constraint firstItem="EMj-1r-sb0" firstAttribute="centerX" secondItem="VFM-W4-erT" secondAttribute="centerX" id="xDR-qH-BUM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="mII-g3-E9F"/>
+            <connections>
+                <outlet property="cancelButton" destination="4Ky-a9-I49" id="gh6-zf-UWc"/>
+                <outlet property="doneButton" destination="uIX-ou-dhQ" id="JUT-Wf-QOu"/>
+                <outlet property="tableView" destination="K3L-87-gad" id="AiE-p3-8zb"/>
+                <outlet property="titleLabel" destination="Tcs-b9-W7j" id="3qN-50-PXD"/>
+            </connections>
+            <point key="canvasLocation" x="113" y="135"/>
+        </view>
+    </objects>
+</document>

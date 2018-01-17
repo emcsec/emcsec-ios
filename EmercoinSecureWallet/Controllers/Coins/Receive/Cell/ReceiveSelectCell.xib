@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Dft-Mr-JBU" customClass="ReceiveSelectCell" customModule="EmercoinSecureWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dft-Mr-JBU" id="Ql2-co-ZO9">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vy-u2-bYk">
+                        <rect key="frame" x="10" y="0.0" width="365" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="P2x-tM-cz2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcF-go-CEb">
+                        <rect key="frame" x="10" y="21" width="365" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="ykP-LF-x7h"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="wcF-go-CEb" secondAttribute="bottom" constant="2" id="BjZ-Bl-1Uj"/>
+                    <constraint firstItem="wcF-go-CEb" firstAttribute="top" secondItem="5vy-u2-bYk" secondAttribute="bottom" id="fkf-7o-l8Y"/>
+                    <constraint firstItem="5vy-u2-bYk" firstAttribute="top" secondItem="Ql2-co-ZO9" secondAttribute="top" id="fuY-Dj-9yb"/>
+                    <constraint firstItem="5vy-u2-bYk" firstAttribute="leading" secondItem="Ql2-co-ZO9" secondAttribute="leading" constant="10" id="l3c-y1-kZU"/>
+                    <constraint firstAttribute="trailing" secondItem="5vy-u2-bYk" secondAttribute="trailing" id="pNx-VO-g4W"/>
+                    <constraint firstItem="wcF-go-CEb" firstAttribute="leading" secondItem="Ql2-co-ZO9" secondAttribute="leading" constant="10" id="s2q-Pn-Pim"/>
+                    <constraint firstAttribute="trailing" secondItem="wcF-go-CEb" secondAttribute="trailing" id="zYw-k8-eaT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="5vy-u2-bYk" id="bVC-U8-ut8"/>
+                <outlet property="optionLabel" destination="wcF-go-CEb" id="4jv-tS-2hS"/>
+            </connections>
+            <point key="canvasLocation" x="-11.5" y="65"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="Ixg-cM-Wu9">
+            <objects>
+                <viewController storyboardIdentifier="InitialViewController" id="HuM-fk-3I7" customClass="InitialViewController" customModule="EmercoinSecureWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XPn-JE-k8I"/>
+                        <viewControllerLayoutGuide type="bottom" id="qab-qQ-eEi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4uk-pF-ht6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bO1-FG-1Tl" customClass="RoundButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                <rect key="frame" x="60" y="336" width="255" height="46"/>
+                                <color key="backgroundColor" red="0.5490196078431373" green="0.36470588235294116" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="OdW-SG-4DN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Generate a new wallet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="diameter">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="seedGenerationButtonPressed" destination="HuM-fk-3I7" eventType="touchUpInside" id="5VS-Ei-CcI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBd-sg-sZM" customClass="RoundButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                <rect key="frame" x="60" y="412" width="255" height="46"/>
+                                <color key="backgroundColor" red="0.5490196078431373" green="0.36470588235294116" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="IFB-Bi-2K9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Restore your wallet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="diameter">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="restoreButtonPressed" destination="HuM-fk-3I7" eventType="touchUpInside" id="vbi-hV-BGB"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KA8-uR-dAE">
+                                <rect key="frame" x="0.0" y="70" width="375" height="186"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MOBILE WALLET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Hzn-O5-Xdg">
+                                        <rect key="frame" x="100" y="173" width="176.5" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="GbS-hn-g9T"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                        <color key="textColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMERCOIN SECURE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zaw-XO-aLH">
+                                        <rect key="frame" x="45" y="135" width="286" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="O2b-sI-bey"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="init_logo" translatesAutoresizingMaskIntoConstraints="NO" id="8C2-W9-fso">
+                                        <rect key="frame" x="132" y="21" width="111" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="111" id="6aj-k3-IAu"/>
+                                            <constraint firstAttribute="height" constant="96" id="hOQ-Kj-Gpk"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8C2-W9-fso" firstAttribute="centerX" secondItem="KA8-uR-dAE" secondAttribute="centerX" id="WyK-Yw-DEn"/>
+                                    <constraint firstItem="8C2-W9-fso" firstAttribute="top" secondItem="KA8-uR-dAE" secondAttribute="top" constant="21" id="jrj-9n-TWN"/>
+                                    <constraint firstItem="zaw-XO-aLH" firstAttribute="top" secondItem="8C2-W9-fso" secondAttribute="bottom" constant="18" id="n7x-2l-89C"/>
+                                    <constraint firstAttribute="height" constant="186" id="qeY-VE-fS4"/>
+                                    <constraint firstItem="zaw-XO-aLH" firstAttribute="centerX" secondItem="KA8-uR-dAE" secondAttribute="centerX" id="t9v-4i-ONc"/>
+                                    <constraint firstItem="Hzn-O5-Xdg" firstAttribute="centerX" secondItem="KA8-uR-dAE" secondAttribute="centerX" id="w7a-r9-vdV"/>
+                                    <constraint firstItem="Hzn-O5-Xdg" firstAttribute="top" secondItem="zaw-XO-aLH" secondAttribute="bottom" id="xGn-Zz-fk7"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Aspanta Limited, 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxQ-Qx-54n">
+                                <rect key="frame" x="112.5" y="631" width="150" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="paF-9v-Rmu">
+                                <rect key="frame" x="171" y="488" width="144" height="25"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7MW-Pq-pjD">
+                                        <rect key="frame" x="0.0" y="25" width="144" height="1"/>
+                                        <color key="backgroundColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txg-Vu-dFZ">
+                                        <rect key="frame" x="0.0" y="3" width="144" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Advanced server settings">
+                                            <color key="titleColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="serversButtonPressed" destination="HuM-fk-3I7" eventType="touchUpInside" id="48b-8D-hVd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7MW-Pq-pjD" secondAttribute="trailing" id="4J0-wk-Zza"/>
+                                    <constraint firstItem="7MW-Pq-pjD" firstAttribute="top" secondItem="paF-9v-Rmu" secondAttribute="top" constant="25" id="Cpp-DI-sEY"/>
+                                    <constraint firstAttribute="bottom" secondItem="7MW-Pq-pjD" secondAttribute="bottom" constant="-1" id="MYS-G8-A74"/>
+                                    <constraint firstItem="txg-Vu-dFZ" firstAttribute="leading" secondItem="paF-9v-Rmu" secondAttribute="leading" id="Xhx-k5-d8C"/>
+                                    <constraint firstItem="7MW-Pq-pjD" firstAttribute="top" secondItem="txg-Vu-dFZ" secondAttribute="bottom" constant="1" id="jVQ-bH-Kyr"/>
+                                    <constraint firstItem="txg-Vu-dFZ" firstAttribute="top" secondItem="paF-9v-Rmu" secondAttribute="top" constant="3" id="kYm-Sf-Qmz"/>
+                                    <constraint firstItem="7MW-Pq-pjD" firstAttribute="leading" secondItem="paF-9v-Rmu" secondAttribute="leading" id="sZL-xg-ayE"/>
+                                    <constraint firstAttribute="trailing" secondItem="txg-Vu-dFZ" secondAttribute="trailing" id="wuF-oN-C3m"/>
+                                    <constraint firstAttribute="height" constant="25" id="zyV-7P-o4J"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bO1-FG-1Tl" firstAttribute="top" secondItem="KA8-uR-dAE" secondAttribute="bottom" constant="80" id="1Yt-CM-0xd"/>
+                            <constraint firstAttribute="trailing" secondItem="bO1-FG-1Tl" secondAttribute="trailing" constant="60" id="4gs-6f-t1F"/>
+                            <constraint firstItem="KA8-uR-dAE" firstAttribute="top" secondItem="XPn-JE-k8I" secondAttribute="bottom" constant="50" id="6Ss-9K-B9O"/>
+                            <constraint firstItem="KA8-uR-dAE" firstAttribute="leading" secondItem="4uk-pF-ht6" secondAttribute="leading" id="6rc-eR-5CG"/>
+                            <constraint firstAttribute="trailing" secondItem="paF-9v-Rmu" secondAttribute="trailing" constant="60" id="A6f-1C-dFj"/>
+                            <constraint firstItem="qab-qQ-eEi" firstAttribute="top" secondItem="hxQ-Qx-54n" secondAttribute="bottom" constant="20" id="Ocl-BA-9L3"/>
+                            <constraint firstItem="hxQ-Qx-54n" firstAttribute="centerX" secondItem="4uk-pF-ht6" secondAttribute="centerX" id="UyQ-uU-peo"/>
+                            <constraint firstItem="JBd-sg-sZM" firstAttribute="leading" secondItem="4uk-pF-ht6" secondAttribute="leading" constant="60" id="ZOb-By-PCU"/>
+                            <constraint firstItem="bO1-FG-1Tl" firstAttribute="leading" secondItem="4uk-pF-ht6" secondAttribute="leading" constant="60" id="a44-6O-CNR"/>
+                            <constraint firstAttribute="trailing" secondItem="KA8-uR-dAE" secondAttribute="trailing" id="bSI-ks-IYR"/>
+                            <constraint firstAttribute="trailing" secondItem="JBd-sg-sZM" secondAttribute="trailing" constant="60" id="egr-lY-8KX"/>
+                            <constraint firstItem="paF-9v-Rmu" firstAttribute="top" secondItem="JBd-sg-sZM" secondAttribute="bottom" constant="30" id="jLs-1i-KCf"/>
+                            <constraint firstItem="JBd-sg-sZM" firstAttribute="top" secondItem="bO1-FG-1Tl" secondAttribute="bottom" constant="30" id="pNC-ef-mPJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="generateButton" destination="bO1-FG-1Tl" id="q6W-Rc-vfi"/>
+                        <outlet property="mobileLabel" destination="Hzn-O5-Xdg" id="PWb-UV-h3z"/>
+                        <outlet property="restoreButton" destination="JBd-sg-sZM" id="prN-hC-EaB"/>
+                        <outlet property="serversButton" destination="txg-Vu-dFZ" id="0Om-kI-1UC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hiY-MM-Wmv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224.8" y="-163.26836581709148"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="init_logo" width="111" height="96"/>
+    </resources>
+</document>

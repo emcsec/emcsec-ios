@@ -1,0 +1,64 @@
+PODS:
+  - AutoCoding (2.2.3)
+  - BlueSocket (0.12.78)
+  - CocoaAsyncSocket (7.6.2)
+  - CocoaLumberjack (1.9.2):
+    - CocoaLumberjack/Extensions (= 1.9.2)
+  - CocoaLumberjack/Core (1.9.2)
+  - CocoaLumberjack/Extensions (1.9.2):
+    - CocoaLumberjack/Core
+  - DeviceKit (1.4.0)
+  - IQKeyboardManagerSwift (5.0.6)
+  - ObjectMapper (3.1.0)
+  - OpenSSL-Universal (1.0.2.11)
+  - QRCode (2.0)
+  - QRCodeReader.swift (8.0.4)
+  - Realm (3.0.2):
+    - Realm/Headers (= 3.0.2)
+  - Realm/Headers (3.0.2)
+  - RealmSwift (3.0.2):
+    - Realm (= 3.0.2)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxRealm (0.7.5):
+    - RealmSwift (~> 3.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
+  - SwipeCellKit (2.0.0)
+
+DEPENDENCIES:
+  - AutoCoding (~> 2.2)
+  - BlueSocket
+  - CocoaAsyncSocket (~> 7.4)
+  - CocoaLumberjack (~> 1.9)
+  - DeviceKit (~> 1.0)
+  - IQKeyboardManagerSwift
+  - ObjectMapper (~> 3.1)
+  - OpenSSL-Universal
+  - QRCode
+  - QRCodeReader.swift (~> 8.0.3)
+  - RxCocoa
+  - RxRealm
+  - SwipeCellKit
+
+SPEC CHECKSUMS:
+  AutoCoding: 90ca3cbc0d77a37cfff75167d705b44148c5fc51
+  BlueSocket: 7a013305c500516f81c5da1c02433012c0fc54e3
+  CocoaAsyncSocket: 3541e024f48c54b251638ef72d51dd42808de932
+  CocoaLumberjack: 628fca2e88ef06f7cf6817309aa405f325d9a6fa
+  DeviceKit: fa74d97499660e88081718b16688e19217595dba
+  IQKeyboardManagerSwift: 02bfbb0dff71c66d0ab77d80d25dfce0c3717735
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  OpenSSL-Universal: bcea8d73aec478029029164f9f0695b57cb94309
+  QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
+  QRCodeReader.swift: 9730cfa7ed5f0dd839765df8cf18d41db20e4081
+  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
+  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxRealm: a6c6c0a07cb61f34209969ca6657734edfdfff30
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  SwipeCellKit: 349c61ffde96ac3ae51c2691a03e421b5b29ee98
+
+PODFILE CHECKSUM: ca8720b08f50435d378a49dc2feda173e022b58d
+
+COCOAPODS: 1.3.1

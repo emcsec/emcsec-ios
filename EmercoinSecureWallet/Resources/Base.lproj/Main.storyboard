@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="HRG-Gq-tM5">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="P2i-Wf-MRa" customClass="TabBarController" customModule="EmercoinSecureWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="2Du-8S-T4C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="muV-dM-ZmT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-217" y="-440"/>
+        </scene>
+        <!--ScanQR Code Controller-->
+        <scene sceneID="hNL-Ic-5UI">
+            <objects>
+                <viewController storyboardIdentifier="ScanQRCodeController" modalTransitionStyle="crossDissolve" id="mYx-pi-dAO" customClass="ScanQRCodeController" customModule="EmercoinSecureWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ofg-0p-bF1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Opt-ik-FcD"/>
+                    </layoutGuides>
+                    <view key="view" alpha="0.10000000149011612" contentMode="scaleToFill" id="Ls2-Nn-bY2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tbj-S4-a4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="561" y="-440"/>
+        </scene>
+        <!--Base Modal View Controller-->
+        <scene sceneID="ogB-pB-5aS">
+            <objects>
+                <viewController storyboardIdentifier="BaseModalViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="JnP-A2-T8d" customClass="BaseModalViewController" customModule="EmercoinSecureWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KMy-eA-f9O"/>
+                        <viewControllerLayoutGuide type="bottom" id="UZK-Xu-hC1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WGf-xL-vXi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qc6-ZZ-skF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1779" y="-650"/>
+        </scene>
+    </scenes>
+</document>

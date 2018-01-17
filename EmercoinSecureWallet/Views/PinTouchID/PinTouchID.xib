@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <view contentMode="scaleToFill" id="61d-Jn-oUk" customClass="PinTouchIDRequestView" customModule="EmercoinSecureWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HF7-R7-hFx" userLabel="main view" customClass="PopupBackgroundView" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                    <rect key="frame" x="33" y="293.5" width="348" height="150"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you like to set up a PIN?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owp-EG-ufi">
+                            <rect key="frame" x="20" y="35" width="308" height="20.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19" id="6mI-0g-gtJ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogl-Bs-Ead">
+                            <rect key="frame" x="70" y="95" width="209" height="31"/>
+                            <subviews>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="117-D6-ptk" customClass="YesButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="104" height="31"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <state key="normal" title="Yes">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="enableConfig" value="NO"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="doneButtonPressedWithSender:" destination="61d-Jn-oUk" eventType="touchUpInside" id="gbs-Iq-zSm"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqK-ST-hba" customClass="CancelButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                    <rect key="frame" x="105" y="0.0" width="104" height="31"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="cancelButtonPressedWithSender:" destination="61d-Jn-oUk" eventType="touchUpInside" id="eBF-rW-PmL"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="209" id="M90-NF-IeM"/>
+                                <constraint firstAttribute="height" constant="31" id="zFg-dW-ssW"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="owp-EG-ufi" firstAttribute="centerX" secondItem="HF7-R7-hFx" secondAttribute="centerX" id="20z-Wq-OcR"/>
+                        <constraint firstAttribute="trailing" secondItem="owp-EG-ufi" secondAttribute="trailing" constant="20" id="3WU-ch-Blk"/>
+                        <constraint firstItem="ogl-Bs-Ead" firstAttribute="centerX" secondItem="HF7-R7-hFx" secondAttribute="centerX" id="9cR-Wp-1pJ"/>
+                        <constraint firstItem="owp-EG-ufi" firstAttribute="top" secondItem="HF7-R7-hFx" secondAttribute="top" constant="35" id="NJw-Yj-eHr"/>
+                        <constraint firstItem="owp-EG-ufi" firstAttribute="leading" secondItem="HF7-R7-hFx" secondAttribute="leading" constant="20" id="QMU-St-2NC"/>
+                        <constraint firstAttribute="height" constant="150" id="nzi-TF-Q1P"/>
+                        <constraint firstAttribute="bottom" secondItem="ogl-Bs-Ead" secondAttribute="bottom" constant="24" id="oyV-4d-cUZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HF7-R7-hFx" firstAttribute="centerY" secondItem="61d-Jn-oUk" secondAttribute="centerY" id="FaM-C1-3et"/>
+                <constraint firstItem="HF7-R7-hFx" firstAttribute="centerX" secondItem="61d-Jn-oUk" secondAttribute="centerX" id="KVb-pw-raF"/>
+                <constraint firstItem="HF7-R7-hFx" firstAttribute="leading" secondItem="61d-Jn-oUk" secondAttribute="leading" constant="33" id="vx8-j8-WnU"/>
+                <constraint firstAttribute="trailing" secondItem="HF7-R7-hFx" secondAttribute="trailing" constant="33" id="wTp-6k-y61"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelButton" destination="wqK-ST-hba" id="jvb-DJ-uBP"/>
+                <outlet property="doneButton" destination="117-D6-ptk" id="k0a-lc-Ybg"/>
+                <outlet property="textLabel" destination="owp-EG-ufi" id="Ke2-Q6-LJp"/>
+            </connections>
+            <point key="canvasLocation" x="123" y="133"/>
+        </view>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="MoD-zd-ckK" customClass="EnterPinView" customModule="EmercoinSecureWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YIL-Ie-dci">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRE-Fv-MpZ">
+                            <rect key="frame" x="0.0" y="118.5" width="414" height="500"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter pin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PuC-Ee-fby">
+                                    <rect key="frame" x="8" y="0.0" width="398" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Hf-mb-Vp6">
+                                    <rect key="frame" x="128" y="70" width="158" height="20"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pin_dot_empty" translatesAutoresizingMaskIntoConstraints="NO" id="Uts-LT-RI9" customClass="PinDotView" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pin_dot_empty" translatesAutoresizingMaskIntoConstraints="NO" id="BWl-u3-CIR" customClass="PinDotView" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="28" y="0.0" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pin_dot_empty" translatesAutoresizingMaskIntoConstraints="NO" id="wdv-4y-m5Z" customClass="PinDotView" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="56" y="0.0" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pin_dot_empty" translatesAutoresizingMaskIntoConstraints="NO" id="aIl-fK-yXF" customClass="PinDotView" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="84" y="0.0" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pin_dot_empty" translatesAutoresizingMaskIntoConstraints="NO" id="1fX-Ss-tTS" customClass="PinDotView" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="110" y="0.0" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pin_dot_empty" translatesAutoresizingMaskIntoConstraints="NO" id="XDC-Vj-mn9" customClass="PinDotView" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="138" y="0.0" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="158" id="fUF-0J-TS8"/>
+                                        <constraint firstAttribute="height" constant="20" id="vLq-cE-9ja"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pk-b1-AbH">
+                                    <rect key="frame" x="94" y="130" width="226" height="323"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIj-Yw-CuW" customClass="RoundButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <state key="normal" title="1">
+                                                <color key="titleColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="highlighted" backgroundImage="pin_selected_image"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="8C5DA3"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberButtonPressedWithSender:" destination="MoD-zd-ckK" eventType="touchUpInside" id="FXN-ds-sK7"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OG1-Ay-paw" customClass="RoundButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="78" y="0.0" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <state key="normal" title="2">
+                                                <color key="titleColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="highlighted" backgroundImage="pin_selected_image"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="8C5DA3"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberButtonPressedWithSender:" destination="MoD-zd-ckK" eventType="touchUpInside" id="8nf-wy-Qy6"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndi-Kp-6IF" customClass="RoundButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="156" y="0.0" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <state key="normal" title="3">
+                                                <color key="titleColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="highlighted" backgroundImage="pin_selected_image"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="8C5DA3"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberButtonPressedWithSender:" destination="MoD-zd-ckK" eventType="touchUpInside" id="C4M-N2-nPF"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qC8-ed-WHy" customClass="RoundButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="78" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <state key="normal" title="4">
+                                                <color key="titleColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="highlighted" backgroundImage="pin_selected_image"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="8C5DA3"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberButtonPressedWithSender:" destination="MoD-zd-ckK" eventType="touchUpInside" id="Wz2-Sw-vGA"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yU-QX-g1Y" customClass="RoundButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="78" y="78" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <state key="normal" title="5">
+                                                <color key="titleColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="highlighted" backgroundImage="pin_selected_image"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="8C5DA3"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberButtonPressedWithSender:" destination="MoD-zd-ckK" eventType="touchUpInside" id="Lbm-Q6-NNw"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5Z-Wk-JVJ" customClass="RoundButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="156" y="78" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <state key="normal" title="6">
+                                                <color key="titleColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="highlighted" backgroundImage="pin_selected_image"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="8C5DA3"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberButtonPressedWithSender:" destination="MoD-zd-ckK" eventType="touchUpInside" id="lu2-bu-Hm2"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbu-zq-TmT" customClass="RoundButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="156" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <state key="normal" title="7">
+                                                <color key="titleColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="highlighted" backgroundImage="pin_selected_image"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="8C5DA3"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberButtonPressedWithSender:" destination="MoD-zd-ckK" eventType="touchUpInside" id="UfL-Gi-tvU"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFv-oK-dUX" customClass="RoundButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="78" y="156" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <state key="normal" title="8">
+                                                <color key="titleColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="highlighted" backgroundImage="pin_selected_image"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="8C5DA3"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberButtonPressedWithSender:" destination="MoD-zd-ckK" eventType="touchUpInside" id="j9r-RM-xJb"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNV-TY-N1L" customClass="RoundButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="156" y="156" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <state key="normal" title="9">
+                                                <color key="titleColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="highlighted" backgroundImage="pin_selected_image"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="8C5DA3"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberButtonPressedWithSender:" destination="MoD-zd-ckK" eventType="touchUpInside" id="6yS-Gk-SKi"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="One-Gt-coq">
+                                            <rect key="frame" x="0.0" y="234" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <state key="normal">
+                                                <color key="titleColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wm7-b6-0UI" customClass="RoundButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="78" y="234" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <state key="normal" title="0">
+                                                <color key="titleColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="highlighted" backgroundImage="pin_selected_image"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="8C5DA3"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberButtonPressedWithSender:" destination="MoD-zd-ckK" eventType="touchUpInside" id="wXv-AY-VmN"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTP-Wy-nSt" customClass="RoundButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="176" y="254" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <state key="normal" title="C">
+                                                <color key="titleColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="8C5DA3"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="clear" destination="MoD-zd-ckK" eventType="touchUpInside" id="mfv-5u-02y"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="226" id="Gyj-10-l5f"/>
+                                        <constraint firstAttribute="height" constant="323" id="c7T-kI-ebr"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAq-Ls-4i0">
+                                    <rect key="frame" x="102" y="474" width="209" height="31"/>
+                                    <subviews>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzK-el-y4H" customClass="YesButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="104" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <state key="normal" title="Ok">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="enableConfig" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="enableColor" value="8C5DA3"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="disableColor" value="ABABAB"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="doneButtonPressedWithSender:" destination="MoD-zd-ckK" eventType="touchUpInside" id="jfc-cC-oat"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dd9-4X-Ct1" customClass="CancelButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="105" y="0.0" width="104" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <state key="normal" title="Cancel">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="cancelButtonPressedWithSender:" destination="MoD-zd-ckK" eventType="touchUpInside" id="cRG-oO-Oi2"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="31" id="TKX-ro-T4t"/>
+                                        <constraint firstAttribute="width" constant="209" id="hf9-EO-NJc"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cj0-cm-9u6">
+                                    <rect key="frame" x="155" y="474" width="104" height="31"/>
+                                    <subviews>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjq-9b-yhL" customClass="BaseButton" customModule="EmercoinSecureWallet" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="104" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.54901960780000003" green="0.36470588240000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <state key="normal" title="Ok">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="enableConfig" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="enableColor" value="8C5DA3"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="disableColor" value="ABABAB"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="doneButtonPressedWithSender:" destination="MoD-zd-ckK" eventType="touchUpInside" id="YFs-me-NbK"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="31" id="JR7-ce-oRy"/>
+                                        <constraint firstAttribute="width" constant="104" id="fa7-HT-TdN"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="3pk-b1-AbH" firstAttribute="top" secondItem="4Hf-mb-Vp6" secondAttribute="bottom" constant="40" id="4fH-t2-zTU"/>
+                                <constraint firstItem="PuC-Ee-fby" firstAttribute="leading" secondItem="pRE-Fv-MpZ" secondAttribute="leading" constant="8" id="CpI-rp-6de"/>
+                                <constraint firstItem="4Hf-mb-Vp6" firstAttribute="top" secondItem="PuC-Ee-fby" secondAttribute="bottom" constant="40" id="JIV-pZ-uG2"/>
+                                <constraint firstItem="BAq-Ls-4i0" firstAttribute="top" secondItem="3pk-b1-AbH" secondAttribute="bottom" constant="21" id="TTj-um-6DD"/>
+                                <constraint firstItem="4Hf-mb-Vp6" firstAttribute="centerX" secondItem="pRE-Fv-MpZ" secondAttribute="centerX" id="YJk-J7-WvD"/>
+                                <constraint firstItem="Cj0-cm-9u6" firstAttribute="top" secondItem="3pk-b1-AbH" secondAttribute="bottom" constant="21" id="aT5-6x-bxF"/>
+                                <constraint firstItem="PuC-Ee-fby" firstAttribute="top" secondItem="pRE-Fv-MpZ" secondAttribute="top" id="iz5-Qu-efk"/>
+                                <constraint firstItem="Cj0-cm-9u6" firstAttribute="centerX" secondItem="pRE-Fv-MpZ" secondAttribute="centerX" id="jb1-Q4-ryP"/>
+                                <constraint firstItem="3pk-b1-AbH" firstAttribute="centerX" secondItem="pRE-Fv-MpZ" secondAttribute="centerX" id="mbp-1G-Gg1"/>
+                                <constraint firstItem="BAq-Ls-4i0" firstAttribute="centerX" secondItem="pRE-Fv-MpZ" secondAttribute="centerX" id="s7g-Qb-pf3"/>
+                                <constraint firstAttribute="trailing" secondItem="PuC-Ee-fby" secondAttribute="trailing" constant="8" id="uaR-Gi-3bx"/>
+                                <constraint firstAttribute="height" constant="500" id="v4c-rI-eyF"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="pRE-Fv-MpZ" firstAttribute="leading" secondItem="YIL-Ie-dci" secondAttribute="leading" id="bNJ-KY-5Ya"/>
+                        <constraint firstAttribute="trailing" secondItem="pRE-Fv-MpZ" secondAttribute="trailing" id="g0d-A4-ywf"/>
+                        <constraint firstItem="pRE-Fv-MpZ" firstAttribute="centerY" secondItem="YIL-Ie-dci" secondAttribute="centerY" id="sLj-qx-2d1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YIL-Ie-dci" secondAttribute="trailing" id="23i-0n-E34"/>
+                <constraint firstItem="YIL-Ie-dci" firstAttribute="top" secondItem="MoD-zd-ckK" secondAttribute="top" id="CYL-K4-peN"/>
+                <constraint firstAttribute="bottom" secondItem="YIL-Ie-dci" secondAttribute="bottom" id="bvz-KN-fMN"/>
+                <constraint firstItem="YIL-Ie-dci" firstAttribute="leading" secondItem="MoD-zd-ckK" secondAttribute="leading" id="cff-OP-Rjr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="buttonView" destination="Cj0-cm-9u6" id="IFA-SV-vYV"/>
+                <outlet property="buttonsView" destination="BAq-Ls-4i0" id="01i-sz-MqO"/>
+                <outlet property="cancelButton" destination="Dd9-4X-Ct1" id="anB-4i-MoC"/>
+                <outlet property="doneButton" destination="bzK-el-y4H" id="wQL-nh-vnQ"/>
+                <outlet property="okButton" destination="mjq-9b-yhL" id="7Rn-tu-000"/>
+                <outlet property="pinView" destination="4Hf-mb-Vp6" id="dXA-fE-5it"/>
+                <outlet property="title" destination="PuC-Ee-fby" id="eNS-mS-fQn"/>
+                <outletCollection property="pinDotViews" destination="BWl-u3-CIR" collectionClass="NSMutableArray" id="TLP-Zo-KRs"/>
+                <outletCollection property="pinDotViews" destination="wdv-4y-m5Z" collectionClass="NSMutableArray" id="MOf-1G-WN1"/>
+                <outletCollection property="pinDotViews" destination="XDC-Vj-mn9" collectionClass="NSMutableArray" id="JAh-85-rgw"/>
+                <outletCollection property="pinDotViews" destination="1fX-Ss-tTS" collectionClass="NSMutableArray" id="c9s-G3-E1M"/>
+                <outletCollection property="pinDotViews" destination="aIl-fK-yXF" collectionClass="NSMutableArray" id="5kU-OF-9sB"/>
+                <outletCollection property="pinDotViews" destination="Uts-LT-RI9" collectionClass="NSMutableArray" id="Gfr-S3-PzW"/>
+            </connections>
+            <point key="canvasLocation" x="611" y="133"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pin_dot_empty" width="22" height="22"/>
+        <image name="pin_selected_image" width="70" height="70"/>
+    </resources>
+</document>
