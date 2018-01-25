@@ -45,6 +45,11 @@ class DashboardViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        setupTableView()
+        setupDashboard()
+        setupRefreshControl()
+        
         if self.isNeedLoadAllData {
             self.viewModel.loadAllData()
         } else {
@@ -53,10 +58,6 @@ class DashboardViewController: BaseViewController {
         
         let wallet = viewModel.wallet
         coins = [wallet.emercoin,wallet.bitcoin]
-        
-        setupTableView()
-        setupDashboard()
-        setupRefreshControl()
         
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             pinTouchIDHelperSetup()
@@ -74,6 +75,8 @@ class DashboardViewController: BaseViewController {
                 if let isLoading = self?.viewModel.isLoading {
                     if !isLoading {
                         self?.tableView.endRefreshing()
+                        self?.tableView.reload()
+                    } else {
                         self?.tableView.reload()
                     }
                 }

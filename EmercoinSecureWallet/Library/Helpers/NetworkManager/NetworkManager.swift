@@ -134,6 +134,8 @@ class NetworkManager {
                         self?.processindApiData(at: data, apiObject: api, completion: {
                             downloadGroup.leave()
                         })
+                    } else {
+                        downloadGroup.leave()
                     }
                 })
             }

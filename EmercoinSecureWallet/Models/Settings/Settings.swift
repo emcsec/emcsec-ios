@@ -72,13 +72,13 @@ class Settings: NSObject {
         guard let _ = server(at: emerType), let _ = server(at: bitType) else {
          
             let emercoinServer = Server()
-            emercoinServer.host = "emcx.emercoin.com"
-            emercoinServer.port = 9110
+            emercoinServer.host = Constants.API.EmercoinHost
+            emercoinServer.port = Constants.API.EmercoinPort
             emercoinServer.type = emerType.fullName()
             
             let bitcoinserver = Server()
-            bitcoinserver.host = "btcx.emercoin.com"
-            bitcoinserver.port = 50001
+            bitcoinserver.host = Constants.API.BitcoinHost
+            bitcoinserver.port = Constants.API.BitcoinPort
             bitcoinserver.type = bitType.fullName()
             
             let realm = try! Realm()
@@ -93,7 +93,7 @@ class Settings: NSObject {
         
         guard let _ = userFee else {
             let fee = UserFee()
-            fee.recommended = 0.00148372
+            fee.recommended = Constants.userRecommendedFee
             fee.custom = fee.recommended
             
             addUserFee(at: fee)

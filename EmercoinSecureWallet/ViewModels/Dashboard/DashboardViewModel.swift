@@ -34,9 +34,8 @@ class DashboardViewModel:SendViewModel {
             AppManager.sharedInstance.isNeedLoadAllData = false
             self.walletCompletion.onNext(true)
         }
+        loadCourses()
         api.loadAllData()
-        
-        wallet.loadCourse()
     }
     
     func loadCourses() {

@@ -98,19 +98,23 @@ class Wallet {
     }
     
     func loadBalances() {
+        
+        self.loadCourse()
+        
         let api = NetworkManager()
         api.completion = { data in
             self.completion.onNext(true)
-            self.loadCourse()
         }
         api.loadBalances()
     }
     
     func loadBalance(at type:CoinType) {
+        
+        self.loadCourse()
+        
         let api = NetworkManager()
         api.completion = { data in
             self.completion.onNext(true)
-            self.loadCourse()
         }
         api.loadBalance(at: type)
     }

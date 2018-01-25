@@ -13,9 +13,9 @@ struct Constants {
     
     struct API {
         
-        static let Host = "electrum.emercoin.net"
-        static let Port:Int32 = 8100
-        static let BitcoinPort:Int32 = 8100
+        static let EmercoinHost = "emcx.emercoin.net"
+        static let BitcoinHost = "btcx.emercoin.net"
+        static let BitcoinPort:Int32 = 50001
         static let EmercoinPort:Int32 = 9110
         static let Balances = "blockchain.address.get_balance"
         static let HistoryTransactions = "blockchain.address.get_history"
@@ -27,6 +27,8 @@ struct Constants {
         static let EmercoinCourse = "https://api.coinmarketcap.com/v1/ticker/emercoin/?convert="
         static let BitcoincoinCourse = "https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert="
     }
+    
+    static let userRecommendedFee = 0.00148372
     
     struct Names {
         static let Prefixes = ["dns","ssh","gpg","kx","ssl","bls","tts","swift","dpo","magnet","enum"]
