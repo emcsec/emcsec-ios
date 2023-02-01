@@ -24,6 +24,10 @@ struct Constants {
         static let UnspentOutputs = "blockchain.address.listunspent"
         static let SendTransaction = "blockchain.transaction.broadcast"
 
+        static let CoinmarketcapTicker = "https://api.coinmarketcap.com/v2/ticker/id/?convert=currency&structure=array"
+        static let CoinmarketcapEmercoinId = "558"
+        static let CoinmarketcapBitcoinId = "1"
+        
         static let EmercoinCourse = "https://api.coinmarketcap.com/v1/ticker/emercoin/?convert="
         static let BitcoincoinCourse = "https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert="
     }

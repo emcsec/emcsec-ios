@@ -59,6 +59,8 @@ const uint32_t          WSBlockAllowedTimeDrift                 = 2 * WSDatesOne
 #pragma mark - Transactions
 
 const uint32_t          WSTransactionVersion                    = 0x00000001;
+const uint32_t          WSTransactionAdvancedMarker             = 0x00;
+const uint32_t          WSTransactionAdvancedFlag               = 0x01;
 const uint32_t          WSTransactionDefaultLockTime            = 0x00000000;
 const uint32_t          WSTransactionInputDefaultSequence       = UINT32_MAX;
 const uint64_t          WSTransactionSizeUnit                   = 1000;         // tx size unit is 1000 bytes

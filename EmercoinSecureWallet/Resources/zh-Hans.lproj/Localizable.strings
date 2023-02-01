@@ -3,6 +3,7 @@
  EmercoinSecureWallet
  */
 
+"Private key" = "私鑰";
 "Minimum" = "最小值為";
 "Recommended" = "推薦的";
 "Custom" = "習慣";
@@ -91,6 +92,7 @@
 "QR-Code is incorrect" = "二维码错误";
 "Addresses for change" = "更改的地址";
 "Address for change in" = "更改的地址";
+"Address for change" = "更改的地址";
 "Please write down this word" = "请写下该串字符";
 "Could not connect to the server for" = "服务器无法连接";
 "Do you want to send to this address" = "你想发送到这个地址吗";

@@ -2,6 +2,7 @@
   Localizable.strings
   EmercoinSecureWallet
 */
+"Private key" = "Private key";
 "Minimum" = "Minimum";
 "Recommended" = "Recommended";
 "Custom" = "Custom";
@@ -16,7 +17,7 @@
 "Edit address" = "Edit address";
 "Edit contact" = "Edit contact";
 "sendTx" = "Send";
-"receiveTx" = "Send";
+"receiveTx" = "Receive";
 "My Balance" = "My Balance";
 "Repair" = "Repair";
 "Start" = "Start";
@@ -92,6 +93,7 @@
 "QR-Code is incorrect" = "QR-Code is incorrect";
 "Addresses for change" = "Addresses for change";
 "Address for change in" = "Address for change in";
+"Address for change" = "Address for change";
 "Please write down this word" = "Please write down this word";
 "Could not connect to the server for" = "Could not connect to the server for";
 "Do you want to send to this address" = "Do you want to send to this address";

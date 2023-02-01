@@ -62,6 +62,8 @@ extern const uint32_t           WSBlockAllowedTimeDrift;
 #pragma mark - Transactions
 
 extern const uint32_t           WSTransactionVersion;
+extern const uint32_t           WSTransactionAdvancedMarker;
+extern const uint32_t           WSTransactionAdvancedFlag;
 extern const uint32_t           WSTransactionDefaultLockTime;
 extern const uint32_t           WSTransactionUnconfirmedHeight;
 extern const uint32_t           WSTransactionInputDefaultSequence;

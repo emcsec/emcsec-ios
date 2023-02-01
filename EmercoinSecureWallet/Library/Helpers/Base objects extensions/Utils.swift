@@ -42,26 +42,25 @@ public func showErroViewAlert(error:NSError) {
     aHelper.showErrorViewAlert(at: error)
 }
 
-public func showCopyView() {
+public func showCopyView(at view:UIView? = nil) {
     
-    let view = loadViewFromXib(name: "Operations", index: 3,
+    let copyView = loadViewFromXib(name: "Operations", index: 3,
                                           frame: nil)
-
-    view.alpha = 0;
+    copyView.alpha = 0;
     
-    if let rootView = RootViewController()?.view {
-        view.center = rootView.center
-        rootView.addSubview(view)
+    if let rootView = view != nil ? view : RootViewController()?.view {
+        copyView.center = rootView.center
+        rootView.addSubview(copyView)
         
         UIView.animate(withDuration: 0.3) {
-            view.alpha = 0.7
+            copyView.alpha = 0.7
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             UIView.animate(withDuration: 0.3, animations: {
-                view.alpha = 0.0
+                copyView.alpha = 0.0
             }, completion: { (state) in
-                view.removeFromSuperview()
+                copyView.removeFromSuperview()
             })
         }
     }

@@ -39,6 +39,6 @@ class DashboardViewModel:SendViewModel {
     }
     
     func loadCourses() {
-        wallet.loadCourse()
+        wallet.loadExchangeCourses()
     }
 }

@@ -212,6 +212,9 @@ class APIManager: NSObject {
                         rawAPI.object = tx.txID
                         if let txRaw = rawAPI.loadData() as? String {
                             tx.txRaw = txRaw
+                            if tx.isNVS {
+                                break
+                            }
                         } else {
                             return
                         }
@@ -240,7 +243,9 @@ class APIManager: NSObject {
                             
                             let outputsAmount = tx.transaction().outputsValue() 
                             
-                            tx.fee = Int(inputsAmount - outputsAmount)
+                            if outputsAmount <= inputsAmount {
+                                tx.fee = Int(inputsAmount - outputsAmount)
+                            }
                         }
                         
                         if coinType == .bitcoin {
@@ -264,19 +269,11 @@ class APIManager: NSObject {
         }
         completion(historyTransactions, nil)
     }
-
-    func loadEmercoinCourse(at currency:CurrencyType, completion:@escaping (_ data: Any?) -> Void) {
-        
-        let api = CoinCourseAPI()
-        api.coin = .emercoin
-        api.currency = currency
-        api.startRequest(completion: completion)
-    }
     
-    func loadBitcoinCourse(at currency:CurrencyType, completion:@escaping (_ data: Any?) -> Void) {
+    func loadCoinExchangeRates(at currency:CurrencyType,coin:CoinType,completion:@escaping (_ price: Double) -> Void) {
         
         let api = CoinCourseAPI()
-        api.coin = .bitcoin
+        api.coin = coin
         api.currency = currency
         api.startRequest(completion: completion)
     }

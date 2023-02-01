@@ -18,5 +18,7 @@ class AddressesCell: BaseSwipeTableViewCell {
         
         nameLabeL.text = viewModel.name
         addressLabeL.text = viewModel.address
+        
+        nameLabeL.textColor = viewModel.nameColor
     }
 }

@@ -26,7 +26,7 @@ class EditAddressView: PopupView {
         }
     }
     
-    private func updateUI() {
+    internal func updateUI() {
         
         if coinType == .bitcoin {
             cancelButton.backgroundColor = UIColor(hexString: Constants.Colors.CancelButton.Bitcoin)

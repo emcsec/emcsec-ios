@@ -48,7 +48,7 @@ class Wallet {
             bitcoin.currencyType = currencyType
             emercoin.currencyType = currencyType
             
-            loadCourse()
+            loadExchangeCourses()
         }
     }
     
@@ -99,7 +99,7 @@ class Wallet {
     
     func loadBalances() {
         
-        self.loadCourse()
+        self.loadExchangeCourses()
         
         let api = NetworkManager()
         api.completion = { data in
@@ -110,7 +110,7 @@ class Wallet {
     
     func loadBalance(at type:CoinType) {
         
-        self.loadCourse()
+        self.loadExchangeCourses()
         
         let api = NetworkManager()
         api.completion = { data in
@@ -119,20 +119,18 @@ class Wallet {
         api.loadBalance(at: type)
     }
     
-    func loadCourse() {
+    func loadExchangeCourses() {
+        self.loadExchangeCourse(at: .bitcoin) { (price) in
+            self.bitcoin.priceCurrency = price
+        }
+        self.loadExchangeCourse(at: .emercoin) { (price) in
+            self.emercoin.priceCurrency = price
+        }
+    }
+    
+    private func loadExchangeCourse(at coin:CoinType, completion:@escaping (_ price: Double) -> Void) {
         let api = APIManager()
-        api.loadEmercoinCourse(at: currencyType) {[weak self] (data) in
-            if let priceCurrency = data as? String {
-                self?.emercoin.priceCurrency = Double(priceCurrency) ?? 0.0
-                self?.completion.onNext(true)
-            }
-        }
-        api.loadBitcoinCourse(at: currencyType) {[weak self] (data) in
-            if let priceCurrency = data as? String {
-                self?.bitcoin.priceCurrency = Double(priceCurrency) ?? 0.0
-                self?.completion.onNext(true)
-            }
-        }
+        api.loadCoinExchangeRates(at: currencyType, coin: coin, completion: completion)
     }
     
     func update() {

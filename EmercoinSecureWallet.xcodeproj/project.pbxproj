@@ -322,6 +322,7 @@
 		2DFE7EAE1FB9B640001F22DE /* SpentOutputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFE7EAD1FB9B640001F22DE /* SpentOutputs.swift */; };
 		766D39AE1FE7F7A900367894 /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766D39AD1FE7F7A900367894 /* CheckButton.swift */; };
 		766D39B11FE922B700367894 /* UserFee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766D39B01FE922B700367894 /* UserFee.swift */; };
+		768CAE1720AC5D9600DF69E9 /* ExportAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CAE1620AC5D9600DF69E9 /* ExportAddressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -779,6 +780,7 @@
 		605F670696DF0451C088BE44 /* Pods_EmercoinSecureWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmercoinSecureWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		766D39AD1FE7F7A900367894 /* CheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
 		766D39B01FE922B700367894 /* UserFee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFee.swift; sourceTree = "<group>"; };
+		768CAE1620AC5D9600DF69E9 /* ExportAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportAddressView.swift; sourceTree = "<group>"; };
 		B3340CF610E4D0DA965DA9E5 /* Pods-EmercoinSecureWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmercoinSecureWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmercoinSecureWallet/Pods-EmercoinSecureWallet.release.xcconfig"; sourceTree = "<group>"; };
 		C66BAB812D8ED37F7B2FA149 /* Pods-EmercoinSecureWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmercoinSecureWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmercoinSecureWallet/Pods-EmercoinSecureWallet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -906,6 +908,7 @@
 			isa = PBXGroup;
 			children = (
 				2D01CD1B1F62DCF700070F26 /* Addresses.xib */,
+				768CAE1520AC5D6C00DF69E9 /* Export */,
 				2D01CD0C1F62DC7000070F26 /* Edit */,
 			);
 			path = Addresses;
@@ -2309,6 +2312,14 @@
 			path = UserFee;
 			sourceTree = "<group>";
 		};
+		768CAE1520AC5D6C00DF69E9 /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				768CAE1620AC5D9600DF69E9 /* ExportAddressView.swift */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
 		93996BF2EBD03C2C59084892 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2694,6 +2705,7 @@
 				2D0A9A631FA7174E00B7B183 /* WSMacrosPrivate.m in Sources */,
 				2D0A9A8A1FA7174E00B7B183 /* WSParametersFactoryMain.m in Sources */,
 				2D0A9A501FA7174E00B7B183 /* WSBIP39.m in Sources */,
+				768CAE1720AC5D9600DF69E9 /* ExportAddressView.swift in Sources */,
 				2DB74B2C1F7267C100D10765 /* LicensiesViewController.swift in Sources */,
 				2D3035A81F4C3AAE007D20BD /* BasePageViewController.swift in Sources */,
 				2D0A9A551FA7174E00B7B183 /* WSStorableBlock+BlockChain.m in Sources */,
@@ -2964,7 +2976,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.aspanta.emercoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "de38615b-10d3-4325-b0b6-3a0260328f94";
+				PROVISIONING_PROFILE = "a51de8da-f2f7-463f-8bc1-02eb5620f4e5";
 				PROVISIONING_PROFILE_SPECIFIER = EmercoinSecureWalletDev;
 				SWIFT_OBJC_BRIDGING_HEADER = EmercoinSecureWallet/Application/SwiftBridgingHeader.h;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -2977,6 +2989,7 @@
 			baseConfigurationReference = B3340CF610E4D0DA965DA9E5 /* Pods-EmercoinSecureWallet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5AJAAW94U5;
 				ENABLE_BITCODE = NO;
@@ -2993,8 +3006,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.aspanta.emercoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "de38615b-10d3-4325-b0b6-3a0260328f94";
-				PROVISIONING_PROFILE_SPECIFIER = EmercoinSecureWalletDev;
+				PROVISIONING_PROFILE = "04d3acab-15fe-458e-9a87-f20370120100";
+				PROVISIONING_PROFILE_SPECIFIER = EmercoinSecureWalletDis;
 				SWIFT_OBJC_BRIDGING_HEADER = EmercoinSecureWallet/Application/SwiftBridgingHeader.h;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;

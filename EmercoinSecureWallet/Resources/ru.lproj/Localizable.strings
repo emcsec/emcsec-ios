@@ -3,6 +3,7 @@
  EmercoinSecureWallet
  */
 
+"Private key" = "Приватный ключ";
 "Minimum" = "Минимум";
 "Recommended" = "Рекомендуемая";
 "Custom" = "Своя";
@@ -88,6 +89,7 @@
 "QR-Code is incorrect" = "Неправильный QR-Code";
 "Addresses for change" = "Адреса для сдачи";
 "Address for change in" = "Адрес для сдачи";
+"Address for change" = "Адрес для сдачи";
 "Operation was successfully completed" = "Операция успешно завершена";
 "Please write down this word" = "Пожалуйста, запишите это слово";
 "Could not connect to the server for" = "Не удалось подключиться к серверу";

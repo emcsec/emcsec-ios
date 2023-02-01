@@ -8,6 +8,7 @@ import UIKit
 class BaseModalViewController: UIViewController {
 
     var modalView:UIView?
+    var close:(() -> (Void))?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,15 +16,23 @@ class BaseModalViewController: UIViewController {
         if let view = modalView as? PopupView {
             
             view.cancel = {[weak self] in
-                self?.dismiss(animated: true, completion: nil)
+                self?.closeController()
             }
             view.done = {[weak self] in
-                self?.dismiss(animated: true, completion: nil)
+                self?.closeController()
             }
             
             view.frame = self.view.frame
             self.view.addSubview(view)
         }
+    }
+    
+    private func closeController() {
+        
+        if close != nil {
+            close!()
+        }
+        dismiss(animated: true, completion: nil)
     }
     
     deinit {

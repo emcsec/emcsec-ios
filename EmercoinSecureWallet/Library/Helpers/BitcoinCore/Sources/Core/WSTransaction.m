@@ -41,6 +41,8 @@
 
 const uint32_t constTime = 1510323021;
 
+
+
 @interface WSSignedTransaction ()
 
 @property (nonatomic, assign) uint32_t version;
@@ -232,6 +234,17 @@ const uint32_t constTime = 1510323021;
     
     const uint32_t version = [buffer uint32AtOffset:offset];
     offset += sizeof(uint32_t);
+    
+    uint8_t marker = [buffer uint8AtOffset:offset];
+    uint8_t flag = [buffer uint8AtOffset:offset + 1];
+    
+    BOOL isWitnesses = NO;
+    
+    if (marker == WSTransactionAdvancedMarker && flag == WSTransactionAdvancedFlag) {
+        NSLog(@"isWitnesses = True");
+        isWitnesses = YES;
+        offset+=2;
+    }
     
     if ([parameters networkType] == WSNetworkTypeEmercoin) {
         time = [buffer uint32AtOffset:offset];
@@ -467,7 +480,6 @@ const uint32_t constTime = 1510323021;
         WSBuffer *buffer = [self signableBufferForInput:input hashFlags:hashFlags time:time];
         
         WSHash256 *hash256 =  [buffer computeHash256];
-        
         WSSignedTransactionInput *signedInput = [input signedInputWithKey:key hash256:hash256 hashFlags:hashFlags];
         [signedInputs addObject:signedInput];
     }

@@ -31,6 +31,7 @@ class HistoryTransaction:Object, Mappable {
     @objc dynamic var outputsAmount:Int = 0
     @objc dynamic var date = ""
     @objc dynamic var dateFull = ""
+    @objc dynamic var isNVS = false
     @objc dynamic var blockheight = 0 {
         didSet {
             isConfirmed = blockheight > 0
@@ -43,10 +44,15 @@ class HistoryTransaction:Object, Mappable {
         didSet {
             let tx = self.transaction()
             self.timeInterval = tx.timeInterval
-            if tx.outputs.count > 0  {
-                self.recognizeSelfTx(at: tx)
-                if !(self.direction() == .selfTx) {
-                    self.processingOutputs(at: tx)
+            
+            if (tx.outputs.map{$0.address()}.contains(nil)) {
+                isNVS = true
+            } else {
+                if tx.outputs.count > 0  {
+                    self.recognizeSelfTx(at: tx)
+                    if !(self.direction() == .selfTx) {
+                        self.processingOutputs(at: tx)
+                    }
                 }
             }
         }
@@ -84,15 +90,20 @@ class HistoryTransaction:Object, Mappable {
             
             txHashs.append(input.outpoint().txId().description)
             
-            if (addresses.allAddresses.map{$0.pubAddress}.contains(input.address().description)) {
-                isInputsMy = true
+            if let inputAddress = input.address() {
+                if (addresses.allAddresses.map{$0.pubAddress}.contains(inputAddress.description)) {
+                    isInputsMy = true
+                }
             }
         }
         
         outputs.forEach { (output) in
-            if (addresses.addresses.map{$0.pubAddress}.contains(output.address().description)) {
-                isOutputsMy = true
-                self.amount = Int(output.value())
+            
+            if let address = output.address() {
+                if (addresses.addresses.map{$0.pubAddress}.contains(address.description)) {
+                    isOutputsMy = true
+                    self.amount = Int(output.value())
+                }
             }
         }
         

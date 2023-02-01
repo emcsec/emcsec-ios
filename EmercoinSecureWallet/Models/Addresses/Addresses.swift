@@ -42,10 +42,14 @@ class Addresses: NSObject {
         }
     }
     
-    func update(at name:String, index:Int) {
+    func update(at name:String, index:Int, isChange:Bool = false) {
         let realm = try! Realm()
         try! realm.write {
-            addresses[index].name = name
+            if isChange {
+                changeAddresses[index].name = name
+            } else {
+                addresses[index].name = name
+            }
         }
     }
     
